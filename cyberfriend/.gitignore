@@ -3,6 +3,16 @@ node_modules/
 /.pnp
 .pnp.js
 
+# Vite / build caches
+.vite/
+node_modules/.vite/
+*.tsbuildinfo
+tsconfig.tsbuildinfo
+
+# Parcel / esbuild (if experimented)
+.parcel-cache/
+.esbuild/
+
 # Tailwind / PostCSS caches
 .tailwindcss-cache/
 .stylelintcache
@@ -19,6 +29,8 @@ build/
 dist/
 *.asar
 *.asar.unpacked/
+release/
+out/
 
 # Packaging temp (electron-builder)
 builder-debug.yml
@@ -30,6 +42,8 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 electron-debug.log
+logs/
+*.log
 
 # Env files (keep example separately)
 .env.local
@@ -58,6 +72,8 @@ Desktop.ini
 
 # Crash reports
 report.[0-9]*.log
+*.dmp
+*.stacktrace
 
 # Electron debug / profile data
 *.log
@@ -78,6 +94,18 @@ public/app.ico
 # Temp rename folders from clean scripts
 dist._old_*/
 
+# Live2D model assets (binary/proprietary) – keep out of VCS; user can place official models locally
+public/live2d/models/
+!public/live2d/models/.gitkeep
+
+# Official Live2D Cubism framework sources (treat as third-party vendored, avoid accidental edits)
+src/live2d/framework/**
+!src/live2d/framework/bootCubism.js
+!src/live2d/framework/frameworkEntry.js
+!src/live2d/framework/NO_STUB_README.md
+#! If later we add patches, create a patches/ folder and explicitly whitelist.
+
+
 # Generated build analysis (optional):
 stats.json
 analyze-report.html
@@ -86,3 +114,24 @@ analyze-report.html
 *.swp
 *.tmp
 ~$*
+*.bak
+*.orig
+*.rej
+
+# Package archives
+*.tgz
+
+# NPM offline cache
+npm-packages-offline-cache/
+
+# Local tooling artifacts
+.DS_Store?
+*.iml
+.idea_modules/
+
+# Live2D temp (export / bake / processing)
+public/live2d/tmp/
+public/live2d/cache/
+
+# Screenshots / design references (keep a dedicated folder untracked)
+screenshots/
