@@ -86,3 +86,26 @@ analyze-report.html
 *.swp
 *.tmp
 ~$*
+
+### Live2D (do not commit proprietary SDK & model assets) ###
+# Core runtime & framework sources (local only)
+public/live2d/core/
+src/live2d/framework/
+
+# Model assets directory
+public/live2d/models/
+
+# Allow directory placeholders
+!public/live2d/core/.gitkeep
+!public/live2d/models/.gitkeep
+!src/live2d/framework/.gitkeep
+
+# Defensive ignore for Live2D file types (if copied elsewhere)
+*.moc3
+*.model3.json
+*.motion3.json
+*.physics3.json
+*.pose3.json
+*.userdata3.json
+*.cdi3.json
+

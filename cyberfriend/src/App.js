@@ -1,4 +1,5 @@
 import logo from './logo.svg';
+// import Live2DCanvas from './live2d/components/Live2DCanvas';
 
 function App() {
   return (
@@ -11,6 +12,11 @@ function App() {
         target="_blank"
         rel="noopener noreferrer"
       >Learn React</a>
+      {/* Future usage:
+      <div className="mt-8 -webkit-app-region-no-drag">
+        <Live2DCanvas />
+      </div>
+      */}
     </div>
   );
 }
