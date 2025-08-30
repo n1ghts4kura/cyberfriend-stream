@@ -1,0 +1,12 @@
+# backend server
+fastapi
+uvicorn[standard]
+
+# ai agent
+openai-agents
+
+# audio receving and playing
+pyaudio
+
+# audio generating
+# ...
