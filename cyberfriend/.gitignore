@@ -98,12 +98,13 @@ dist._old_*/
 public/live2d/models/
 !public/live2d/models/.gitkeep
 
-# Official Live2D Cubism framework sources (treat as third-party vendored, avoid accidental edits)
+# (Removed earlier rule that ignored entire framework; keep sources so project builds standalone)
+# Ignore official Live2D framework sources (users fetch SDK separately). Keep only our wrappers.
 src/live2d/framework/**
-!src/live2d/framework/bootCubism.js
+!src/live2d/framework/live2dcubismframework.js
 !src/live2d/framework/frameworkEntry.js
+!src/live2d/framework/bootCubism.js
 !src/live2d/framework/NO_STUB_README.md
-#! If later we add patches, create a patches/ folder and explicitly whitelist.
 
 
 # Generated build analysis (optional):

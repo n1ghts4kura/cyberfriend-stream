@@ -1,6 +1,5 @@
-// Aggregation entry to avoid stale stub; explicitly gather symbols from TS sources.
-// Explicit .ts extension to bypass neutral placeholder live2dcubismframework.js without modifying SDK source code.
-import { CubismFramework } from './live2dcubismframework.ts';
+// Import via stub JS (scheme 1) so we don't need .ts extension in business code.
+import { CubismFramework } from './live2dcubismframework';
 import { CubismMoc } from './model/cubismmoc';
 import { CubismRenderer_WebGL } from './rendering/cubismrenderer_webgl';
 
