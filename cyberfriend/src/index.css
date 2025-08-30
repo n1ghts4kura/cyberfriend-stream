@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply m-0 font-sans antialiased; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+}
+
+/* Electron frameless drag regions */
+html, body, #root { height: 100%; }
+body, #root { -webkit-app-region: drag; }
+button, a, input, textarea, select, img { -webkit-app-region: no-drag; }
+
+@layer utilities {
+  @keyframes spin-slow { from { transform: rotate(0deg);} to { transform: rotate(360deg);} }
+  .animate-spin-slow { animation: spin-slow 20s linear infinite; }
+}

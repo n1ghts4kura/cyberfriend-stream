@@ -1,0 +1,88 @@
+### Node / React / Electron standard ###
+node_modules/
+/.pnp
+.pnp.js
+
+# Tailwind / PostCSS caches
+.tailwindcss-cache/
+.stylelintcache
+.eslintcache
+postcss-cache/
+
+# Test coverage
+coverage/
+
+# CRA build output (rebuilt every time)
+build/
+
+# Electron distribution artifacts
+dist/
+*.asar
+*.asar.unpacked/
+
+# Packaging temp (electron-builder)
+builder-debug.yml
+builder-effective-config.yaml
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+electron-debug.log
+
+# Env files (keep example separately)
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env
+
+# OS junk
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# IDE/editor
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+
+# Optional lockfiles (choose one strategy). If you want to commit lock file, remove its line.
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# Crash reports
+report.[0-9]*.log
+
+# Electron debug / profile data
+*.log
+*.pid
+*.pid.lock
+*.patch
+*.orig
+
+# Windows installer output extras
+/*.exe.blockmap
+
+# Generated icons (if using electron-builder icon conversion)
+icon.icns
+icon.ico
+app.ico
+public/app.ico
+
+# Temp rename folders from clean scripts
+dist._old_*/
+
+# Generated build analysis (optional):
+stats.json
+analyze-report.html
+
+# Temporary scratch files
+*.swp
+*.tmp
+~$*

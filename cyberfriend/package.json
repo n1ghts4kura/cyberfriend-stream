@@ -1,0 +1,77 @@
+{
+  "name": "cyberfriend",
+  "description": "CyberFriend desktop app",
+  "author": "n1ghts4kura",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/jest-dom": "^6.8.0",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "main": "electron-main.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+  "dev:electron": "node scripts/kill-prev.cjs && concurrently -k -n WEB,ELECTRON -c yellow,cyan \"react-scripts start\" \"wait-on tcp:3000 && cross-env ELECTRON_START_URL=http://localhost:3000 electronmon --inspect=5858 .\"",
+  "dist:win": "react-scripts build && electron-builder --win",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "electron": "^37.4.0",
+    "electron-builder": "^24.13.3",
+    "concurrently": "^9.0.1",
+    "wait-on": "^7.2.0",
+    "cross-env": "^7.0.3",
+  "electronmon": "^2.0.2",
+  "tailwindcss": "^3.4.10",
+  "postcss": "^8.4.41",
+  "autoprefixer": "^10.4.20"
+  },
+  "build": {
+    "appId": "com.cyberfriend.app",
+    "productName": "CyberFriend",
+    "asar": true,
+    "directories": {
+      "buildResources": "public",
+      "output": "dist"
+    },
+    "files": [
+      "build/**/*",
+      "electron-main.js",
+      "preload.js",
+      "package.json"
+    ],
+    "extraMetadata": {
+      "main": "electron-main.js"
+    },
+    "win": {
+  "target": ["nsis"],
+  "icon": "public/logo512.png"
+    }
+  }
+}
